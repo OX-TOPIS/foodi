@@ -8,9 +8,9 @@ const Card = ({ item }) => {
         setIsHearFillted(!isHearFillted);
     }
   return (
-    <div className="card card-compact w-96 bg-base-100 shadow-xl relative rounded-2xl">
+    <div className="card card-compact w-72 bg-base-100 shadow-xl relative rounded-2xl ">
         <div onClick={()=>handleHeartClick()} className="right-0 top-0 absolute bg-green p-4 rounded-bl-3xl rounded-tr-3xl cursor-pointer ">
-            {isHearFillted ? <FaHeart className="h-5 w-5 text-white"/> : <FaHeart className="h-5 w-5 text-rose-500"/>}
+            {isHearFillted ? <FaHeart className="h-5 w-5 text-rose-500"/> : <FaHeart className="h-5 w-5 text-white"/>}
         </div>
         <Link to={`/menu/${item._id}`}>
         <figure>
@@ -21,7 +21,7 @@ const Card = ({ item }) => {
           />
         </figure>
         </Link>
-        <div className="card-body">
+        <div className="card-body w-full">
             <Link to={`/menu/${item._id}`}><h2 className="card-title">{item.name}</h2></Link>
           <p>Description of the item</p>
           <div className="card-actions justify-between items-center">
